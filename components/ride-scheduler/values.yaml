@@ -1,0 +1,6 @@
+implementationProfile: quarkus-camel-openapi
+build:
+  enabled: true
+  profile: quarkus-jvm
+  repository: https://github.com/contract-first-kafka/swan-ride-scheduler-service.git
+  revision: main

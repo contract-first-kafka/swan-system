@@ -1,0 +1,19 @@
+replicas: 1
+image:
+  pullPolicy: IfNotPresent
+route:
+  enabled: true
+runtime:
+  health:
+    initialDelaySeconds: 10
+    periodSeconds: 10
+  resources:
+    requests: {cpu: 100m, memory: 256Mi}
+    limits: {cpu: 500m, memory: 1Gi}
+  envFromSecretNames: []
+  env:
+    - name: KAFKA_BOOTSTRAP_SERVERS
+      valueFrom:
+        configMapKeyRef:
+          name: swan-broker-test-connection
+          key: KAFKA_BOOTSTRAP_SERVERS
