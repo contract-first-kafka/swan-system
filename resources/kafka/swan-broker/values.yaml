@@ -1,0 +1,9 @@
+profile: kafka
+resourceName: swan-broker
+implementation:
+  path: charts/resource/kafka
+kafkaVersion: 4.2.0
+replicas: 1
+storage:
+  storageClass: 
+  deleteClaim: false
