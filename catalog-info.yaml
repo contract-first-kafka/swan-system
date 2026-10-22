@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: swan
+  title: swan
+  description: Swan Boat Business
+  annotations:
+    contract-first-idp.github.io/scm-provider: github
+    contract-first-idp.github.io/scm-host: github.com
+    contract-first-idp.github.io/domain-org: contract-first-kafka
+    contract-first-idp.github.io/domain-repo: demo-domain
+    contract-first-idp.github.io/repository-name: swan-system
+spec:
+  owner: group:default/domain-maintainers
+  domain: domain:default/demo
+  groupId: io.github.contractfirstkafka.demo.swan
